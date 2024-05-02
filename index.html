@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>E-suroy_Municipalities-of-Dapa.Online</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul>
+
+
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#portfolio">Tourist Spot</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                    <li><a href="homestay.html">Home stay</a></li>
+                    <li><a href="brgy.html">Barangay</a></li>
+                    <li><a href="transpo.html">Transportation</a></li>
+                    <li><a href="local.html">Local Service</a></li>
+                    
+
+                </ul>
+            </nav>
+           
+        </div>
+    </div>
+  <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="mybg.png" alt="Slide 1">
+    <div class="text"></div>
+  </div>
+
+  <div class="slide fade">
+    <img src="bp1.png" alt="Slide 2">
+    <div class="text"></div>
+  </div>
+
+
+  <!-- Slide 3 -->
+  <div class="slide fade">
+    <img src="numberpic1.png" alt="Slide 3">
+    <div class="text"></div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide fade">
+    <img src="slide7.png" alt="Slide 4">
+    <div class="text"></div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide fade">
+    <img src="Bagacay.png" alt="Slide 5">
+    <div class="text"></div>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="slide fade">
+    <img src="slide1.jpg" alt="Slide 6">
+    <div class="text"></div>
+  </div>
+
+ 
+
+
+</div>
+<br>
+
+<!-- The dots/bullets/indicators -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+ 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+</script>
+<table id="mayor">
+<div id="about">
+<div class="mayor" id="mayor">
+   
+    <tr>
+        <td>
+            <Img src="mayor.jpg" width="300"></Img>
+    <section id="location"></section>
+    <h2>Mayor. Elizabeth Matugas</h2>
+        </td>
+
+        <td> <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125826.44595794026!2d126.04567060000001!3d9.759593099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f9a3e578bcf9%3A0x2b6257ebdb9901e7!2sDapa%2C%20Surigao%20del%20Norte!5e0!3m2!1sen!2sph!4v1712566848346!5m2!1sen!2sph" width="700" height="270" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p></td>
+    </tr>
+    
+</div>
+</table>
+    <br>
+    
+        <div class="container">
+            <div class="row">
+            
+                <div class="about-col-2">
+                    <h1 class="sub-title"></h1>
+                    <p>The municipality of Dapa lies south of Siargao Island.  It is 36 nautical miles east of Surigao City.  A few nautical miles from the town is the famous Philippine Deep.
+                        The early village along its sea coast are the barangays of Cambas-ac, Union and  Dolores.
+                    Sometime in the early part of the last century of the Spanish regime, Moro piracy was rampant in the southeast coast of Mindanao.  Pirates occasionally swept down the coastal village of Siargao
+                     Island and left behind them destruction and death.  Natives were often taken as captives and slaves.
+                    Due to these frequent raids, the villagers abandoned their homes and sought haven in Taghaligue (now Dapa) which was then a lust timberland and protected from the shore with a thick
+                    formation of all mangroves.
+                     Island and left behind them destruction and death.  Natives were often taken as captives and slaves.
+                    From this vantage position, it was then easy for them to run cover.  They usually lay prone on the ground (hapa)
+                    behind the huge tree trunks.
+                    ​Thus, Dapa, corrupted from the vernacular word Hapa, was adopted by the natives as the permanent name of their settlement in lieu of Taghaligue, to constantly remind them of those vicious Moro raids.</p>
+    
+                  
+
+                    <label for="modal-toggle-1" class="modal-button">Contacts</label>
+<input type="checkbox" id="modal-toggle-1">
+<div class="modal">
+    <div class="modal-content">
+        <label for="modal-toggle-1" class="close-button">×</label>
+        <h2>In case of Emergency, Please Contact </h2> <br><br>
+
+         <h3>  Municipal Police Station <br>
+            09989719407
+            09985987337 <br><br>
+            Bureau of Fire Protection <br>
+            09317218776 <br><br>
+            Municipal Environment and Natural Resources office <br>
+            09358583318 <br><br>
+            Philippine Coast Guard <br>
+            09615208683 <br><br>
+            Rural Health Unit <br>
+            09304708177 <br><br>
+            PMFC Siargao Station <br>
+            09468573169 <br> <br>
+            MSWDO <br>
+            09085083074 <br> <br>
+            MDRRMO <br>
+            09685852331
+            09502507186 <br> <br>
+            SIARELCO <br>
+            09198371190
+            09988525581 <br> <br>
+            Metro Siargao Water District <br>
+            09286544041 <br> <br>
+            Municipal Tourist and Culture office <br>
+            09465543157
+            09761309544 <br><br>
+            Marina Satellite office <br>
+            09129633029</h3>
+    </div>
+</div>
+
+<label for="modal-toggle-2" class="modal-button">Events/Fiesta</label>
+<input type="checkbox" id="modal-toggle-2">
+<div class="modal">
+    <div class="modal-content">
+        <label for="modal-toggle-2" class="close-button">×</label>
+        <h3>Bagakay August 15-16 <br> <br>
+            San Carlos May 15-16 <br> <br>
+            Buenavista June 26-27 <br> <br>
+            Cabawa May 14-15 <br> <br>
+            Santa Filomina May 25-26 <br> <br>
+            Consolacion September 1-2 <br><br>
+            Corregidor June 12-13 <br><br>
+            Dagohoy June 25-26 <br> <br>
+            Monseratt September 17-18 <br> <br>
+            San Miguel March 18-19 <br> <br>
+            Dapa January 15-16 <br> <br>
+            Union May 11-12 <br> <br>
+            Santa Fe June 7-8 <br> <br>
+            Jubang June 16-17 <br> <br>
+            Don PAULINO June 
+             28-29<br> <br>
+            Cambas ac June 28-29 <br> <br>
+            Osmiña Oct. 6-7
+        </h3>
+          </div>
+</div>
+
+    
+<br>
+<section id="portfolio"></section>
+<h1 class="sub-title"></h1>
+<div id="portfolio">
+    <div class="container">
+        <div class="portfolio-list">
+            <div class="portfolio">
+                <img src="bagacay ts.jpg" width="150%">
+                <div class="layer">
+                    <h3>Bagacay Tourist Spot</h3>
+                    <p>Puyawon Falls</p>
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64467115.075839885!2d125.6915355!3d9.529530399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33016979d77609fb%3A0x13e5ee302fb7338c!2sPUYAWON%20FALLS!5e0!3m2!1sen!2sph!4v1714374558314!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="Don paulino.jpg" width="150%">
+                <div class="layer">
+                    <h3>DON PAULINO</h3>
+                    <p>Coconut View</p>
+
+                </div>
+            </div>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125806.5339740565!2d126.06016099555147!3d9.812167020606545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33040753d25f230f%3A0x69f6af07d07b34e8!2sCoconut%20Trees%20View%20Deck!5e0!3m2!1sen!2sph!4v1714375033854!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="Union.jpg" width="150%">
+                <div class="layer">
+                    <h3>Union</h3>
+                    <p>Union Beach</p>
+                
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125829.30208719643!2d126.113754478321!3d9.752029001024953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f7130e719c37%3A0x3b70ae7262e0957d!2sUnion%20Beach!5e0!3m2!1sen!2sph!4v1714375811667!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                    
+            <div class="portfolio">
+                <img src="Buenavista.jpg" width="150%">
+                <div class="layer">
+                    <h3>Buenavista</h3>
+                    <p>Cavernous Cave</p>
+
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.079961256008!2d125.52892682443719!3d9.869654733959623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33013532ecf851a9%3A0x9ee85831bfc2cda0!2sBuenavista%2C%20Surigao%20City%2C%20Surigao%20del%20Norte!5e0!3m2!1sen!2sph!4v1714376297069!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="corregidor-island-17.jpg" width="150%">
+                <div class="layer">
+                    <h3>Corregidor</h3>
+                    <p>Corregidor Beach</p>
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13974.818908014111!2d126.06991156481502!3d9.6925486525188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303fa89cf954c1b%3A0x9db83b68278174be!2sCorregidor%20Beach!5e0!3m2!1sen!2sph!4v1714376571687!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="pagoda parish.jpg" width="95%">
+                <div class="layer">
+                    <h3>Barangay 3</h3>
+                    <p>Pagoda, Sto. Nino Church</p>
+                    
+                </div>
+            </div>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.75779143491818!2d126.11041330793458!3d9.755506700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f7d3287df049%3A0xc1c285638a5a7022!2sDapa%20Parish%20church!5e0!3m2!1sen!2sph!4v1714377394550!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="boulevard.jpg" width="190%">
+                <div class="layer">
+                    <h3>Barangay 6</h3>
+                    <p>Boulevard</p>
+                   
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15728.534273979434!2d126.05098602019503!3d9.754751921621736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f9a1f46e2bf3%3A0x8edb545c013f653f!2sDapa%20Boulevard%20Park!5e0!3m2!1sen!2sph!4v1714377533561!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+            <div class="portfolio">
+                <img src="castor.png" width="100%">
+                <div class="layer">
+                    <h3>Cambas-ac</h3>
+                    <p>Castor Beach&Beer Resort</p>
+                   
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d503715.27367646794!2d125.78506542466407!3d9.484742846518005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303d303d983fd1f%3A0xba7c0035717faf4d!2sCastor&#39;s%20Point%20Beach%20%26%20Bar!5e0!3m2!1sen!2sph!4v1714377990873!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+
+            <div class="portfolio">
+                <img src="songkoy-cold-spring.jpg" width="100%">
+                <div class="layer">
+                    <h3>Santa Fe</h3>
+                    <p>Songkoy Spring Aqua Park</p>
+                   
+                </div>
+            </div>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251702.21221080722!2d125.32602217305981!3d9.69409117215905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301150b094107ff%3A0xb0e2a45421ec4870!2sSongkoy%20Spring%20Aqua%20Park!5e0!3m2!1sen!2sph!4v1714378251603!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="Union.jpg" width="150%">
+                <div class="layer">
+                    <h3>Union</h3>
+                    <p>Pungkay View</p>
+                    
+                </div>
+            </div>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.146399095868!2d126.10104137353743!3d9.753664377228061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f752bae8ae77%3A0x1ac783749fa3e61d!2sPUNGKAY%20VIEW!5e0!3m2!1sen!2sph!4v1714378450899!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="secret.jpg" width="150%">
+                <div class="layer">
+                    <h3>Union</h3>
+                    <p>Paradise Surfing</p>
+                   
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15728.806177411874!2d126.0908084!3d9.7489888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f7d88d8881bb%3A0x434c85c74beb9ac!2sSecret%20Spot%20-%20Paradise%20Surfing!5e0!3m2!1sen!2sph!4v1714378616761!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+            <div class="portfolio">
+                <img src="talisay.jpg" width="150%">
+                <div class="layer">
+                    <h3>Union</h3>
+                    <p>Talisay Beach</p>
+                   
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.7192149737034!2d125.42571577353462!3d9.533105780897479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301176fd4952729%3A0x4ace1e01f45df16a!2sTalisay%20beach!5e0!3m2!1sen!2sph!4v1714378833048!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+            <div class="portfolio">
+                <img src="kani.jpg" width="150%">
+                <div class="layer">
+                    <h3>Union</h3>
+                    <p>Kanijugan Peak</p>
+                   
+                </div>
+            </div>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.963226151148!2d126.10220017353767!3d9.769179076966967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303f70a53770743%3A0x24fe4ae69677032a!2sCanijugan%20Peak%20Retreat%20and%20Campsite!5e0!3m2!1sen!2sph!4v1714378966192!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            <div class="portfolio">
+                <img src="cansamadon.jpg" width="150%">
+                <div class="layer">
+                    <h3>Santa Felomina</h3>
+                    <p>Cansodmon private beach</p>
+                   
+                </div>
+            </div>
+       <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15730.959993405013!2d126.02731817498331!3d9.7032178785413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303fbc366e0aba3%3A0x1033d3917be9d95d!2sCansodmon%20private%20beach%20resort!5e0!3m2!1sen!2sph!4v1714379435195!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+    </div>
+</div>
+<br><br>
+
+
+<footer>
+    <section id="contacts"></section>
+        <div class="contact-info">
+            <h1 class="sub-title">SOCIAL MEDIA & CONTACTS</h1> <br><br>
+            <p>Email: lgu.Dapasdn@gmail.com</p>
+            <p>municipality of dapa</p>
+<br><br>
+            <a href=""><img src="twt.png" width="32"></a>
+            <a href=""><img src="Ig (1).png" width="45"></a>
+            <a href="https://www.facebook.com/municipalityofdapa"><img src="fb.png" width="34"></a>
+        </div>
+
+
+</footer>
+
+<br><br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+
+    let mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+</body>
+</html>

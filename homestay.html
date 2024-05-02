@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="homestay.css" >
+</head>
+<body>
+    <div id="header">
+            <div class="container">
+                <nav>
+                    
+                    <ul>
+                        <li><a href="index.html">HOME PAGE</a></li>
+                    </ul>
+                </nav>
+               
+        </div>
+    </div>
+   
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="HOMEBG.png" alt="Slide 1">
+        <div class="text"></div>
+      </div>
+    
+      <div class="slide fade">
+        <img src="bp1.png" alt="Slide 2">
+        <div class="text"></div>
+      </div>
+    
+    
+      <!-- Slide 3 -->
+      <div class="slide fade">
+        <img src="numberpic1.png" alt="Slide 3">
+        <div class="text"></div>
+      </div>
+    
+      <!-- Slide 4 -->
+      <div class="slide fade">
+        <img src="slide7.png" alt="Slide 4">
+        <div class="text"></div>
+      </div>
+    
+      <!-- Slide 5 -->
+      <div class="slide fade">
+        <img src="Bagacay.png" alt="Slide 5">
+        <div class="text"></div>
+      </div>
+    
+      <!-- Slide 6 -->
+      <div class="slide fade">
+        <img src="slide1.jpg" alt="Slide 6">
+        <div class="text"></div>
+      </div>
+    
+     
+    
+    
+    </div>
+    <br>
+    
+    <!-- The dots/bullets/indicators -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+     
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    </script>
+      
+      <select id="barangaySelect" onchange="displayInfo()">
+        <option value="">Select a Barangay</option><br><br><br>
+        <option value="Bagakay" class="barangay">Bagakay
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Barangay 1 (Poblacion)" class="barangay">Barangay 1 (Poblacion)
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Barangay 2 (Poblacion)" class="barangay">Barangay 2 (Poblacion)
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Barangay 3 (Poblacion)" class="barangay">Barangay 3 (Poblacion)
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Barangay 4 (Poblacion)" class="barangay">Barangay 4 (Poblacion)
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Barangay 5 (Poblacion)" class="barangay">Barangay 5 (Poblacion)
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Barangay 6 (Poblacion)" class="barangay">Barangay 6 (Poblacion)
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Barangay 7 (Poblacion)" class="barangay">Barangay 7 (Poblacion)
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Barangay 8 (Poblacion)" class="barangay">Barangay 8 (Poblacion)
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Barangay 9 (Poblacion)" class="barangay">Barangay 9 (Poblacion)
+          <div class="popup">
+         
+          </div>
+        </option>
+        <option value="Barangay 10 (Poblacion)" class="barangay">Barangay 10 (Poblacion)
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Barangay 11 (Poblacion)" class="barangay">Barangay 11 (Poblacion)
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Barangay 12 (Poblacion)" class="barangay">Barangay 12 (Poblacion)
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Barangay 13 (Poblacion)" class="barangay">Barangay 13 (Poblacion)
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Buenavista" class="barangay">Buenavista
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Cabawa" class="barangay">Cabawa
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Cambas-ac" class="barangay">Cambas-ac
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Consolacion" class="barangay">Consolacion
+          <div class="popup">
+          
+          </div>
+        </option>
+        <option value="Corregidor" class="barangay">Corregidor
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Dagohoy" class="barangay">Dagohoy
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Don Paulino" class="barangay">Don Paulino 
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Jubang" class="barangay">Jubang
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Montserrat" class="barangay">Montserrat
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="Osmeña" class="barangay">Osmeña
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="San Carlos" class="barangay">San Carlos
+          <div class="popup">
+           
+          </div>
+        </option>
+        <option value="San Miguel" class="barangay">San Miguel
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Santa Fe" class="barangay">Santa Fe
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Santa Filomena" class="barangay">Santa Filomena
+          <div class="popup">
+            
+          </div>
+        </option>
+        <option value="Union" class="barangay">Union
+          <div class="popup">
+           
+          
+          </div>
+        </option>
+        <option value="Dagohoy" class="barangay">Dagohoy 
+          <div class="popup">
+            
+          </div>
+        </option>
+      </select>
+      
+      <div id="output"></div>
+      
+      <script>
+        function displayInfo() {
+          var selectedBarangay = document.getElementById("barangaySelect").value;
+          var outputDiv = document.getElementById("output");
+        
+          // Clear previous output
+          outputDiv.innerHTML = "";
+        
+          // Show selected barangay information
+          if(selectedBarangay !== "") {
+            var info = getBarangayInfo(selectedBarangay); "<br>"
+            outputDiv.innerHTML = "<h3>" + selectedBarangay + "</h3>" +  "<br>" + 
+                                  "<div style='text-align: center;'>" +
+                                  "<h4><strong></strong> " + info.population + "</h4>" +
+                                  "<h1><strong></strong> " + info.area + "</h1>"  + "<br>" + "<br>" ;
+                                
+      
+      
+      
+        
+          }
+        }
+      
+        function getBarangayInfo(barangay) {
+          // This is just a placeholder function, you can replace it with actual data retrieval logic
+          // Here we are just returning some dummy data
+          var info = {};
+          switch(barangay) {
+            case "Bagakay":
+            info.area = "No home stay!";
+      
+              break;
+            case "Barangay 1 (Poblacion)":
+            info.area = "No home stay!";
+            break;
+
+            case "Barangay 2 (Poblacion)":
+             info.area = "No home stay!";
+              break;
+              
+            case "Barangay 3 (Poblacion)":
+              info.population = "Doc. Tiu home stay";
+              info.area = "Book now!";
+              
+              break;
+            case "Barangay 4 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 5 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 6 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 7 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 8 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 9 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 10 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 11 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Barangay 12 (Poblacion)":
+              info.population = "Domagtoy home stay";
+              info.area = "Book now!";
+              break;
+            case "Barangay 13 (Poblacion)":
+            info.area = "No home stay!";
+              break;
+            case "Buenavista":
+            info.area = "No home stay!";
+              break;
+            case "Cabawa":
+            info.area = "No home stay!";
+              break;
+            case "Cambas-ac":
+            info.area = "No home stay!";
+              break;
+            case "Consolacion":
+            info.area = "No home stay!";
+              break;
+            case "Corregidor":
+            info.area = "No home stay!";
+              break;
+            case "Dagohoy":
+            info.area = "No home stay!";
+              break;
+            case "Don Paulino":
+              info.population = "Isla Haruhay home stay";
+              info.area = "Book now!";
+             
+              break;
+            case "Jubang":
+            info.area = "No home stay!";
+              break;
+            case "Montserrat":
+            info.area = "No home stay!";
+              break;
+            case "Osmeña":
+              info.population = "Cabalan homestay and Elvie homestay";
+              info.area = "Book now!";
+              break;
+            case "San Carlos":
+            info.area = "No home stay!";
+              case "San Miguel":
+              info.population = "Doloricon homes stay";
+              info.area = "Book now!";
+              break;
+           
+            case "Santa Fe":
+            info.area = "No home stay!";
+              break;
+            case "Santa Filomena":
+            info.area = "No home stay!";
+              break;
+            case "Union":
+              info.population = "Comahig home stay and Xian home stay";
+              info.area = "Book now!";
+              
+              break;
+            case "Dagohoy":
+            info.area = "No home stay!";
+              break;
+           
+          }
+          return info;
+        }
+      </script>    </body>
+    </html>

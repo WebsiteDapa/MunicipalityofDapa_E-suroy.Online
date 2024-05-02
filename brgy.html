@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="brgy.css" type="text/css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+        <nav>
+            
+            <ul>
+                <li><a href="index.html">HOME PAGE</a></li>
+            </ul>
+        </nav>
+       
+    </div>
+
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="BRGYBG.png" alt="Slide 1">
+          <div class="text"></div>
+        </div>
+      
+        <div class="slide fade">
+          <img src="numberpic.png" alt="Slide 2">
+          <div class="text">Comahig Beach Resort</div>
+        </div>
+      
+      
+        <!-- Slide 3 -->
+        <div class="slide fade">
+          <img src="numberpic1.png" alt="Slide 3">
+          <div class="text">Pungkay view</div>
+        </div>
+      
+        <!-- Slide 4 -->
+        <div class="slide fade">
+          <img src="slide7.png" alt="Slide 4">
+          <div class="text">Coregidor</div>
+        </div>
+      
+        <!-- Slide 5 -->
+        <div class="slide fade">
+          <img src="Bagacay.png" alt="Slide 5">
+          <div class="text">Bagacay Twin Falls</div>
+        </div>
+      
+        <!-- Slide 6 -->
+        <div class="slide fade">
+          <img src="slide1.jpg" alt="Slide 6">
+          <div class="text">San Miguel River</div>
+        </div>
+      
+       
+      
+     
+      </div>
+      <br>
+      
+      <!-- The dots/bullets/indicators -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+       
+      </div>
+      
+      <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      </script>
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+    
+        let mybutton = document.getElementById("myBtn");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        
+    </script>
+
+
+
+<select id="barangaySelect" onchange="displayInfo()">
+  <option value="">Select a Barangay</option><br><br><br>
+  <option value="Bagakay" class="barangay">Bagakay
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Barangay 1 (Poblacion)" class="barangay">Barangay 1 (Poblacion)
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Barangay 2 (Poblacion)" class="barangay">Barangay 2 (Poblacion)
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Barangay 3 (Poblacion)" class="barangay">Barangay 3 (Poblacion)
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Barangay 4 (Poblacion)" class="barangay">Barangay 4 (Poblacion)
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Barangay 5 (Poblacion)" class="barangay">Barangay 5 (Poblacion)
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Barangay 6 (Poblacion)" class="barangay">Barangay 6 (Poblacion)
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Barangay 7 (Poblacion)" class="barangay">Barangay 7 (Poblacion)
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Barangay 8 (Poblacion)" class="barangay">Barangay 8 (Poblacion)
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Barangay 9 (Poblacion)" class="barangay">Barangay 9 (Poblacion)
+    <div class="popup">
+   
+    </div>
+  </option>
+  <option value="Barangay 10 (Poblacion)" class="barangay">Barangay 10 (Poblacion)
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Barangay 11 (Poblacion)" class="barangay">Barangay 11 (Poblacion)
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Barangay 12 (Poblacion)" class="barangay">Barangay 12 (Poblacion)
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Barangay 13 (Poblacion)" class="barangay">Barangay 13 (Poblacion)
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Buenavista" class="barangay">Buenavista
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Cabawa" class="barangay">Cabawa
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Cambas-ac" class="barangay">Cambas-ac
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Consolacion" class="barangay">Consolacion
+    <div class="popup">
+    
+    </div>
+  </option>
+  <option value="Corregidor" class="barangay">Corregidor
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Dagohoy" class="barangay">Dagohoy
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Don Paulino" class="barangay">Don Paulino 
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Jubang" class="barangay">Jubang
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Montserrat" class="barangay">Montserrat
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="Osmeña" class="barangay">Osmeña
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="San Carlos" class="barangay">San Carlos
+    <div class="popup">
+     
+    </div>
+  </option>
+  <option value="San Miguel" class="barangay">San Miguel
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Santa Fe" class="barangay">Santa Fe
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Santa Filomena" class="barangay">Santa Filomena
+    <div class="popup">
+      
+    </div>
+  </option>
+  <option value="Union" class="barangay">Union
+    <div class="popup">
+     
+    
+    </div>
+  </option>
+  <option value="Dagohoy" class="barangay">Dagohoy 
+    <div class="popup">
+      
+    </div>
+  </option>
+</select>
+
+<div id="output"></div>
+
+<script>
+  function displayInfo() {
+    var selectedBarangay = document.getElementById("barangaySelect").value;
+    var outputDiv = document.getElementById("output");
+  
+    // Clear previous output
+    outputDiv.innerHTML = "";
+  
+    // Show selected barangay information
+    if(selectedBarangay !== "") {
+      var info = getBarangayInfo(selectedBarangay); "<br>"
+      outputDiv.innerHTML = "<h3>" + selectedBarangay + "</h3>" +  "<br>" + 
+                            "<div style='text-align: center;'>" +
+                            "<h4><strong>Celebration:</strong> " + info.population + "</h4>" +
+                            "<h4><strong>Fiesta Date:</strong> " + info.area + "</h4>"  + "<br>" + "<br>" +
+                            "<h1>" + "<tr><td style='text-align: center;'><strong>Barangay Captain</strong></td><td style='text-align: center;'>" + "</h1>" +  "<h5>" + info.official + "</td></tr>"  + "</h5>" + "<br>" + "<br>"  +
+                            "<h6>" +  "<tr><td style='text-align: center;'><strong><strong>Barangay Kagawad</strong></td><td style='text-align: center;'>" + "</h6>" +  "<h2>" + info.kagawad +   "</h2>"+"</td></tr>" + "<br>" + "<br>" + "<br>"
+                            + "<table style='margin: 0 auto;'>"; // Add line break here
+      // Create table for additional information
+      var table = document.createElement("table");
+      var tbody = document.createElement("tbody");
+
+      // Add rows for background, location, and barangay official
+     
+      outputDiv.innerHTML += "<tr><td style='text-align: center;'><strong></strong></td><td style='text-align: center;'>" + "<p>" + info.background + "</p>" + "</td></tr>"  + "<br>" + "<br>" + "<br>"; 
+                            "<tr><td style='text-align: center;'><strong>Location:</strong></td><td style='text-align: center;'>" + info.location + "</td></tr>"  + "<br>" + "<br>" + "<br>"; 
+                            "<tr><td style='text-align: center;'><strong>Barangay Captain:</strong></td><td style='text-align: center;'>" + info.official + "</td></tr>" ;
+      outputDiv.innerHTML += "</table></div>"; 
+
+
+
+      
+      table.appendChild(tbody);
+      outputDiv.appendChild(table);
+    }
+  }
+
+  function getBarangayInfo(barangay) {
+    // This is just a placeholder function, you can replace it with actual data retrieval logic
+    // Here we are just returning some dummy data
+    var info = {};
+    switch(barangay) {
+      case "Bagakay":
+        info.population = "N/A";
+        info.area = "August 15-16";
+        info.background = "Bagakay is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 550. This represented 1.90% of the total population of Dapa. The population of Bagakay grew from 316 in 1990 to 550 in 2020, an increase of 234 people over the course of 30 years. The latest census figures in 2020 denote a positive growth rate of 3.13%, or an increase of 75 people, from the previous population of 475 in 2015.";
+        info.location = "";
+        info.official = " HON. DENNIS M. TORRES";
+        info.kagawad = "<br> ARMANDO T. PAGA <br> <br> GLEN D. PRAJES ALMER A. ABENDAN <br><br><br>CRISTINO O. VILLAFUERTE <br><br><br>NEMESIO O. REMANDO, JR. <br><br><br>VICTOR P. CARBONILLA, JR. <br><br><br>TEODORNA P. CORDUA";
+        ;
+
+        break;
+      case "Barangay 1 (Poblacion)":
+        info.population = "San Vicente Ferer";
+        info.area = "April 4-5";
+        info.background = "Barangay 1, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 3,602. This represented 12.42% of the total population of Dapa. The household population of Barangay 1 in the 2015 Census was 2,610 broken down into 544 households or an average of 4.80 members per household. According to the 2015 Census, the age group with the highest population in Barangay 1 is 10 to 14, with 360 individuals. Conversely, the age group with the lowest population is 80 and over, with 16 individuals.";
+        info.location = "[Location info for Barangay 1 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 2 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 2, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 597. This represented 2.06% of the total population of Dapa. The household population of Barangay 2 in the 2015 Census was 747 broken down into 156 households or an average of 4.79 members per household. According to the 2015 Census, the age group with the highest population in Barangay 2 is 15 to 19, with 104 individuals. Conversely, the age group with the lowest population is 75 to 79, with 5 individuals";
+        info.location = "[Location info for Barangay 2 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 3 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 3, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 593. This represented 2.04% of the total population of Dapa. The household population of Barangay 3 in the 2015 Census was 547 broken down into 112 households or an average of 4.88 members per household. According to the 2015 Census, the age group with the highest population in Barangay 3 is 15 to 19, with 64 individuals. Conversely, the age groups with the lowest population are in the ranges Under 1, 75 to 79, and 80 and over, with 10 individuals";
+        info.location = "[Location info for Barangay 3 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 4 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = ">Barangay 4, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 519. This represented 1.79% of the total population of Dapa. The household population of Barangay 4 in the 2015 Census was 448 broken down into 100 households or an average of 4.48 members per household. According to the 2015 Census, the age group with the highest population in Barangay 4 is 10 to 14, with 69 individuals. Conversely, the age group with the lowest population is 80 and over, with 3 individuals";
+        info.location = "[Location info for Barangay 4 (Poblacion)]";
+        info.official = "Renith Almaden";
+        info.kagawad = "<br>Kag- Joan Ranara<br><br><br> Ariel Borga <br><br><br>Elmer Nohara <br><br><br>Camilo Iballa<br><br><br> Joseph Plazarras <br><br><br> Joey Escorpion<br><br><br>Meyra Dela Cruz</td>"
+        break;
+      case "Barangay 5 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 5, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 302. This represented 1.04% of the total population of Dapa. The household population of Barangay 5 in the 2015 Census was 257 broken down into 61 households or an average of 4.21 members per household.According to the 2015 Census, the age group with the highest population in Barangay 5 is 10 to 14, with 31 individuals. Conversely, the age groups with the lowest population are in the ranges 70 to 74, and 75 to 79, with 1 individual.";
+        info.location = "[Location info for Barangay 5 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 6 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 6, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 523. This represented 1.80% of the total population of Dapa. The household population of Barangay 6 in the 2015 Census was 563 broken down into 116 households or an average of 4.85 members per household.According to the 2015 Census, the age group with the highest population in Barangay 6 is 15 to 19, with 67 individuals. Conversely, the age group with the lowest population is 75 to 79, with 3 individuals.";
+        info.location = "[Location info for Barangay 6 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 7 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 7, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 119. This represented 0.41% of the total population of Dapa. The household population of Barangay 7 in the 2015 Census was 143 broken down into 40 households or an average of 3.58 members per household.According to the 2015 Census, the age group with the highest population in Barangay 7 is 25 to 29, with 17 individuals. Conversely, the age groups with the lowest population are in the ranges Under 1, 70 to 74, 75 to 79, and 80 and over, with 1 individual.";
+        info.location = "[Location info for Barangay 7 (Poblacion)]";
+        info.official = "Rosanna L. Chua";
+        info.kagawad = "<br>Rose E. Quinaso<br><br><br> Juliet C. Burdas <br><br><br>Rotchie P. Sulapas <br><br><br> Jemar V. Bislig <br><br><br> Marilyn Sirunda <br><br><br> Rolito Sulapas <br><br><br> Shina B. Asijo</td>" ;
+        break;
+      case "Barangay 8 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 8, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 211. This represented 0.73% of the total population of Dapa. The household population of Barangay 8 in the 2015 Census was 216 broken down into 53 households or an average of 4.08 members per household.According to the 2015 Census, the age group with the highest population in Barangay 8 is 5 to 9, with 31 individuals. Conversely, the age group with the lowest population is 75 to 79, with 1 individual.";
+        info.location = "[Location info for Barangay 8 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 9 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 9, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 383. This represented 1.32% of the total population of Dapa. The household population of Barangay 9 in the 2015 Census was 355 broken down into 79 households or an average of 4.49 members per household.According to the 2015 Census, the age group with the highest population in Barangay 9 is 15 to 19, with 39 individuals. Conversely, the age group with the lowest population is 75 to 79, with 5 individuals.";
+        info.location = "[Location info for Barangay 9 (Poblacion)]";
+        info.official = "JEAN TIU";
+        info.kagawad = "<br>Enan M. Tinio<br><br><br>Jocelino E. Marcos <br><br><br>  Giegy<br><br><br>Norie L. Agahep <br><br><br> Subla S. Golloso <br><br><br> Mitze M. Noguerra<br><br><br> Oscar T. Caturan Jr.";
+        break;
+      case "Barangay 10 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 10, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 477. This represented 1.64% of the total population of Dapa. The household population of Barangay 10 in the 2015 Census was 486 broken down into 94 households or an average of 5.17 members per household.According to the 2015 Census, the age groups with the highest population in Barangay 10 are in the ranges 5 to 9, and 10 to 14, with 56 individuals. Conversely, the age groups with the lowest population are in the ranges Under 1, and 75 to 79, with 8 individuals.";
+        info.location = "[Location info for Barangay 10 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 11 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 11, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 424. This represented 1.46% of the total population of Dapa. The household population of Barangay 11 in the 2015 Census was 439 broken down into 97 households or an average of 4.53 members per household.According to the 2015 Census, the age group with the highest population in Barangay 11 is 10 to 14, with 52 individuals. Conversely, the age group with the lowest population is 70 to 74, with 5 individuals.";
+        info.location = "[Location info for Barangay 11 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 12 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 12, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 3,402. This represented 11.73% of the total population of Dapa. The household population of Barangay 12 in the 2015 Census was 2,467 broken down into 545 households or an average of 4.53 members per household.According to the 2015 Census, the age group with the highest population in Barangay 12 is 10 to 14, with 311 individuals. Conversely, the age group with the lowest population is 80 and over, with 18 individuals.";
+        info.location = "[Location info for Barangay 12 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Barangay 13 (Poblacion)":
+        info.population = "[Population]";
+        info.area = "[Area]";
+        info.background = "Barangay 13, formerly Poblacion, is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 2,006. This represented 6.92% of the total population of Dapa.The household population of Barangay 13 in the 2015 Census was 1,852 broken down into 334 households or an average of 5.54 members per household.According to the 2015 Census, the age group with the highest population in Barangay 13 is 10 to 14, with 262 individuals. Conversely, the age group with the lowest population is 80 and over, with 8 individuals." ;
+        info.location = "[Location info for Barangay 13 (Poblacion)]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Buenavista":
+        info.population = "[Population]";
+        info.area = "June 26-27";
+        info.background = "Buenavista is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 475. This represented 1.64% of the total population of Dapa. The household population of Buenavista in the 2015 Census was 401 broken down into 81 households or an average of 4.95 members per household.According to the 2015 Census, the age group with the highest population in Buenavista is 5 to 9, with 67 individuals. Conversely, the age group with the lowest population is 80 and over, with 1 individual.";
+        info.location = "[Location info for Buenavista]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Cabawa":
+        info.population = "[Population]";
+        info.area = " May 14-15";
+        info.background = "Cabawa is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 629. This represented 2.17% of the total population of Dapa. The household population of Cabawa in the 2015 Census was 400 broken down into 111 households or an average of 3.60 members per household.According to the 2015 Census, the age group with the highest population in Cabawa is 5 to 9, with 54 individuals. Conversely, the age group with the lowest population is Under 1, with 4 individuals.";
+        info.location = "[Location info for Cabawa]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Cambas-ac":
+        info.population = "[Population]";
+        info.area = "June 28-29";
+        info.background = "Cambasac is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 773. This represented 2.66% of the total population of Dapa. The household population of Cambas-ac in the 2015 Census was 704 broken down into 128 households or an average of 5.50 members per household.According to the 2015 Census, the age group with the highest population in Cambas-ac is 10 to 14, with 109 individuals. Conversely, the age group with the lowest population is 65 to 69, with 4 individuals.";
+        info.location = "[Location info for Cambas-ac]";
+        info.official = "EDILBERTO N. TESADO";
+        info.kagawad = "<br>Henry S. Sadicon<br><br><br> Redemar Esparrago<br><br><br>Penito P. Melida<br><br><br> Rowelyn N. Consigna <br><br><br> Deolito A. Trabajales <br><br><br> Isidro L. Ruaya <br><br><br>Emily P. Dela Torre</td>";
+        break;
+      case "Consolacion":
+        info.population = "[Population]";
+        info.area = "September 1-2";
+        info.background = "Consolacion is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 1,849. This represented 6.37% of the total population of Dapa. The household population of Consolacion in the 2015 Census was 1,783 broken down into 368 households or an average of 4.85 members per household.According to the 2015 Census, the age group with the highest population in Consolacion is 10 to 14, with 242 individuals. Conversely, the age group with the lowest population is 80 and over, with 19 individuals.";
+        info.location = "[Location info for Consolacion]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Corregidor":
+        info.population = "[Population]";
+        info.area = "June 12-13";
+        info.background = "Corregidor is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 648. This represented 2.23% of the total population of Dapa. The household population of Corregidor in the 2015 Census was 471 broken down into 100 households or an average of 4.71 members per household.According to the 2015 Census, the age group with the highest population in Corregidor is 10 to 14, with 82 individuals. Conversely, the age group with the lowest population is 75 to 79, with 7 individuals.";
+        info.location = "[Location info for Corregidor]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Dagohoy":
+        info.population = "[Population]";
+        info.area = "June 25-26";
+        info.background = "Dagohoy is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 393. This represented 1.35% of the total population of Dapa. The household population of Dagohoy in the 2015 Census was 281 broken down into 78 households or an average of 3.60 members per household.According to the 2015 Census, the age group with the highest population in Dagohoy is 10 to 14, with 43 individuals. Conversely, the age group with the lowest population is Under 1, with 1 individual.";
+        info.location = "[Location info for Dagohoy]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Don Paulino":
+        info.population = "[Population]";
+        info.area = "June 28-29";
+        info.background = "Don Paulino is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 919. This represented 3.17% of the total population of Dapa. The household population of Don Paulino in the 2015 Census was 762 broken down into 171 households or an average of 4.46 members per household.According to the 2015 Census, the age group with the highest population in Don Paulino is 5 to 9, with 93 individuals. Conversely, the age group with the lowest population is 80 and over, with 6 individuals.";
+        info.location = "[Location info for Don Paulino ]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Jubang":
+        info.population = "[Population]";
+        info.area = "June 16-17";
+        info.background = "Jubang is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 709. This represented 2.44% of the total population of Dapa. The household population of Jubang in the 2015 Census was 396 broken down into 81 households or an average of 4.89 members per household.According to the 2015 Census, the age group with the highest population in Jubang is 10 to 14, with 54 individuals. Conversely, the age group with the lowest population is 75 to 79, with 3 individuals.";
+        info.location = "[Location info for Jubang]";
+        info.official = "CHONA ROSALES";
+        info.kagawad = "<br>Kag-Juvani Delgado<br><br><br>Danilo Bordas <br><br><br>Silverio Pantorilla <br><br><br>Cheryl Castaños<br><br><br>Jun Durero <br><br><br>Luel Jovero <br><br><br>Elvie Gubantes";
+        break;
+      case "Montserrat":
+        info.population = "[Population]";
+        info.area = "September 17-18";
+        info.background = "Montserrat is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 509. This represented 1.75% of the total population of Dapa. The household population of Montserrat in the 2015 Census was 422 broken down into 111 households or an average of 3.80 members per household.According to the 2015 Census, the age group with the highest population in Montserrat is 10 to 14, with 63 individuals. Conversely, the age group with the lowest population is Under 1, with 4 individuals.";
+        info.location = "[Location info for Montserrat]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Osmeña":
+        info.population = "[Population]";
+        info.area = "Oct. 6-7";
+        info.background = "Osmeña is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 2,511. This represented 8.66% of the total population of Dapa. The household population of Osmeña in the 2015 Census was 1,752 broken down into 401 households or an average of 4.37 members per household.According to the 2015 Census, the age group with the highest population in Osmeña is 5 to 9, with 212 individuals. Conversely, the age group with the lowest population is 80 and over, with 18 individuals.";
+        info.location = "[Location info for Osmeña]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "San Carlos":
+        info.population = "[Population]";
+        info.area = "May 15-16";
+        info.background = "San Carlos is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 502. This represented 1.73% of the total population of Dapa. The household population of San Carlos in the 2015 Census was 492 broken down into 102 households or an average of 4.82 members per household.According to the 2015 Census, the age group with the highest population in San Carlos is 10 to 14, with 93 individuals. Conversely, the age group with the lowest population is 75 to 79, with 1 individual.";
+        info.location = "[Location info for San Carlos]";
+        info.official = "ROMALYN CONSIGNA";
+        info.kagawad = "<br>Manuel Bou<br><br><br>Bernaldo Patagan<br><br><br>Adunis Bou <br><br><br> Levie Bou<br><br><br> Junmar Deliman <br><br><br> Junrey Jovero <br><br><br> Ralph Guyunan";
+        break;
+        case "San Miguel":
+        info.population = "[Population]";
+        info.area = "March 18-19";
+        info.background = "San Miguel is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 1,042. This represented 3.59% of the total population of Dapa.";
+        info.location = "[Location info for San Miguel]";
+        info.official = "NORMAN APOLO"
+        info.kagawad = "<br>Cristy Morales<br><br><br>Richard Apolo<br><br><br>Angelo Apolo <br><br><br>Amancio Olayon <br><br><br>Ronnie Buo <br><br><br>Saturnina Ejandra <br><br><br>Bellacita Sinday";
+
+        break;
+     
+      case "Santa Fe":
+        info.population = "[Population]";
+        info.area = "June 7-8";
+        info.background = "Santa Fe is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 1,050. This represented 3.62% of the total population of Dapa. The household population of Santa Fe in the 2015 Census was 733 broken down into 158 households or an average of 4.64 members per household.According to the 2015 Census, the age group with the highest population in Santa Fe is 10 to 14, with 97 individuals. Conversely, the age group with the lowest population is 75 to 79, with 6 individuals.";
+        info.location = "[Location info for Santa Fe]";
+        info.official = "EMANUEL E. IJAPON";
+        info.kagawad = "<br>Michael P. Buo<br><br><br>Joy O. Tesado <br><br><br>Herman B. Sollos<br><br><br>Michael B.<br><br><br>Gemma E. Golandrina<br><br><br>Vichela C. Bondoc <br><br><br>Vilma A. Gayapa";
+        break;
+      case "Santa Filomena":
+        info.population = "[Population]";
+        info.area = "May 25-26";
+        info.background = "Santa Filomena is a barangay in the city of Dipolog, in the province of Zamboanga del Norte. Its population as determined by the 2020 Census was 8,475. This represented 6.14% of the total population of Dipolog. The household population of Santa Filomena in the 2015 Census was 8,698 broken down into 1,801 households or an average of 4.83 members per household.According to the 2015 Census, the age group with the highest population in Santa Filomena is 15 to 19, with 936 individuals. Conversely, the age group with the lowest population is 75 to 79, with 58 individuals.]";
+        info.location = "[Location info for Santa Filomena]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Union":
+        info.population = "[Population]";
+        info.area = "May 11-12";
+        info.background = "Union is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 2,949. This represented 10.17% of the total population of Dapa. The household population of Union in the 2015 Census was 2,420 broken down into 561 households or an average of 4.31 members per household.According to the 2015 Census, the age group with the highest population in Union is 10 to 14, with 315 individuals. Conversely, the age group with the lowest population is 75 to 79, with 36 individuals.";
+        info.location = "[Location info for Union]";
+        info.official = "[Barangay Official Name]";
+        break;
+      case "Dagohoy":
+        info.population = "[Population]";
+        info.area = "June 25-26";
+        info.background = "Dagohoy is a barangay in the municipality of Dapa, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 393. This represented 1.35% of the total population of Dapa. The household population of Dagohoy in the 2015 Census was 281 broken down into 78 households or an average of 3.60 members per household. According to the 2015 Census, the age group with the highest population in Dagohoy is 10 to 14, with 43 individuals. Conversely, the age group with the lowest population is Under 1, with 1 individual.";
+        info.location = "[Location info for Dagohoy HOME PAGE]";
+        info.official = "[Barangay Official Name]";
+        break;
+     
+    }
+    return info;
+  }
+</script>
+
+</body>
+</html>
